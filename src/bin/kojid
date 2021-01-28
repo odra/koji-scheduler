@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import sys
+
+from koji_builder_kube import cli, errors
+
+
+if __name__ == '__main__':
+  try:
+    cli.run()
+  except errors.KojiError as e:
+    sys.stderr.write(f'{str(e)}\n')
+    sys.exit(e.code)

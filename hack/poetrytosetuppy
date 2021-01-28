@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+dephell \
+deps convert \
+--from pyproject.toml \
+--from-format poetry \
+--to setup.py \
+--to-format setuppy
